@@ -1,0 +1,6 @@
+<%= simple_form_for(@list) do |x| %>
+<%= x.input :name, label: "What's the name of your new list?" %>
+<%= x.submit "Create New List" %>
+<% end %>
+<br>
+<p><%= link_to "🔙", lists_path %></p>
