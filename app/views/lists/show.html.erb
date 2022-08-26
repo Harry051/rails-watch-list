@@ -2,7 +2,7 @@
 
 <h1 class="header"><%= @list.name %></h1>
 <br>
-<p><%= link_to "Add movie to list", new_list_bookmark_path(@list) %></p>
+<p class="add-movie-btn"><%= link_to "Add movie to list", new_list_bookmark_path(@list) %></p>
 <br>
 <% @list.bookmarks.each do |bm| %>
   <div class="container">
