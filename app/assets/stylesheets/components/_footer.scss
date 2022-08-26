@@ -6,6 +6,8 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  position: sticky;
+  bottom: 0px;
 }
 .footer-links {
   display: flex;
@@ -15,8 +17,9 @@
   color: black;
   opacity: 0.15;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 36px;
   padding: 0px 10px;
+  transition: 0.4s;
 }
 .footer-links a:hover {
   opacity: 1;

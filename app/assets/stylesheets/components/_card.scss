@@ -36,6 +36,11 @@
 
   .fa-dumpster {
     color: rgb(103, 94, 94);
+    opacity: 0.9;
+    transition: 0.3s;
+    &:hover {
+      color: black;
+    }
   }
 
   .fa-star {

@@ -1,6 +1,6 @@
 
 
-<h1><%= @list.name %></h1>
+<h1 class="header"><%= @list.name %></h1>
 <br>
 <p><%= link_to "Add movie to list", new_list_bookmark_path(@list) %></p>
 <br>
@@ -22,7 +22,7 @@
   </div>
 <% end %>
 <br>
-<p><%= link_to '<i class="fa-solid fa-house-chimney"></i>'.html_safe, lists_path %></p>
+<p class="home-btn"><%= link_to '<i class="fa-solid fa-house-chimney"></i>'.html_safe, lists_path %></p>
 
 
 <div class="footer">
@@ -32,9 +32,6 @@
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
 </div>
 <%# <div class="card-poster"><%= image_tag bm.movie.poster_url , :style => "width: 100px; object-fit: contain;" %>
