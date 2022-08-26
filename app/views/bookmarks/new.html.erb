@@ -1,9 +1,9 @@
-<h1>lets get bookmarky</h1>
+<h1>Find films</h1>
 
 <%= simple_form_for [@list, @bookmark] do |x| %>
 <%= x.association :movie %>
 <%= x.input :comment, label: "What did you think if this film?" %>
-<%= x.submit "Create New bookmark" %>
+<%= x.submit "Add to list!" %>
 <% end %>
 
-<p><%= link_to "🔙", lists_path %></p>
+<p><%= link_to '<i class="fa-solid fa-house-chimney"></i>'.html_safe, lists_path %></p>

@@ -1,12 +1,21 @@
-<p><%= @list.name %></p>
+
+
+<h1><%= @list.name %></h1>
 <br>
 <p><%= link_to "Add movie to list", new_list_bookmark_path(@list) %></p>
 <br>
-<ul>
-  <% @list.bookmarks.each do |b| %>
-    <li><%= b.comment %><%= link_to "    ❎", bookmark_path(b), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this?"} %><li>
-    <%=  %>
-  <% end %>
-</ul>
+<% @list.bookmarks.each do |bm| %>
+  <div class="container">
+    <div class="card">
+        <h2><%= bm.movie.title %></h2>
+        <p><%= bm.movie.overview %></p>
+          <div class="card flex-row"><%= image_tag bm.movie.poster_url , :style => "width: 100px; object-fit: contain;" %></div>
+        <p><%= bm.comment %></p>
+        <%= link_to '<i class="fa-solid fa-dumpster"></i>'.html_safe, bookmark_path(bm), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this?"} %>
+    </div>
+  </div>
+<% end %>
 <br>
-<p><%= link_to "🔙", lists_path %></p>
+<p><%= link_to '<i class="fa-solid fa-house-chimney"></i>'.html_safe, lists_path %></p>
+
+<%# <div class="card-poster"><%= image_tag bm.movie.poster_url , :style => "width: 100px; object-fit: contain;" %>

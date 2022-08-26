@@ -1,4 +1,5 @@
-<h1>sup</h1>
+<h1>The internet's handiest list maker 💾</h1>
+<h3>Your current lists:</h3>
 <ul>
   <% @lists.each do |l| %>
     <li><%= link_to l.name, list_path(l) %></li>
